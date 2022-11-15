@@ -1,0 +1,29 @@
+.food-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.food-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+  border: 2px solid #30abf2;
+    
+}
+
+.food__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.food__recipe {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.food__includes {
+    text-align: center;
+}

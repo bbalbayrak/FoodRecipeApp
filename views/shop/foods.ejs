@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/food.css">
+</head>
+
+<body>
+    <%- include('../includes/navbar.ejs') %>
+
+    <main>
+        <% if (food.length > 0) { %>
+            <div class="grid">
+                <% for (let foods of food) { %>
+                    <article class="food-item">
+                        <header class="main__header">
+                            <h1 class="food__title">Title: <%= foods.title %></h1>
+                        </header>
+                        <div class="main__image">
+                            <img src="<%= foods.imageUrl %>"
+                                alt="<%= foods.title %>">
+                        </div>
+                        <div class="main__content">
+                            <p class="food__recipe">Recipe: <%= foods.recipe %></p>
+                        </div>
+                        <div class="main__content">
+                            <p class="food__recipe">Includes: <%= foods.includes %></p>
+                        </div>
+                        <div class="main__content">
+                            <p class="food__recipe">Post Owner: <%= foods.userName %></p>
+                        </div>
+                        <div class="main__content">
+                            <p class="food__recipe">Creation Date: <%= foods.createdAt %></p>
+                        </div>
+                        <div class="main__content">
+                            <p class="food__recipe">Update Date: <%= foods.updatedAt %></p>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Foods Found!</h1>
+        <% } %>
+    </main>
+<%- include('../includes/end.ejs') %>
