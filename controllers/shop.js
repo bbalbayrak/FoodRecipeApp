@@ -9,9 +9,6 @@ exports.getFoods = (req, res, next) => {
         food: foods,
         isAuthenticated: req.session.isLoggedIn,
       });
-      // res.status(200).json();
-      // res.json({requestBody: req.body})
-      console.log(req.body);
     })
     .catch((err) => console.log(err));
 };

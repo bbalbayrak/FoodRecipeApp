@@ -11,7 +11,7 @@ const foodsRoute = require("./routes/shop");
 const authRoute = require("./routes/auth");
 
 const MONGODB_URI =
-  "mongodb+srv://burak:sefillerx123@node.8k7fnwn.mongodb.net/recipes?retryWrites=true&w=majority";
+  "mongodb+srv://username:password@node.8k7fnwn.mongodb.net/recipes?retryWrites=true&w=majority";
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.set("views", "views");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.json())
+
 
 //SESSION
 app.use(
@@ -71,7 +71,7 @@ mongoose
     //     user.save();
     //   }
     //   console.log(user);
-    // }); //this part create dummy user at the beginning for doing user stuff
+    // }); //This part create dummy user at the beginning for doing user stuff
     app.listen(3000);
   })
   .catch((err) => console.log(err));

@@ -42,6 +42,7 @@ exports.postAddFoods = (req, res, next) => {
     .save()
     .then((newFood) => {
       console.log(newFood);
+      console.log(foodTitle);
       res.redirect("/");
     })
     .catch((err) => console.log(err));
